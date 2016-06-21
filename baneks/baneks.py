@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
 import os
-import random
 from sys import argv
 from sys import exit as sysex
 
@@ -9,10 +8,8 @@ from lxml import etree
 import requests
 
 
-_max_index = 1142
-
-def get_banek(index):
-    req = requests.get('http://baneks.ru/' + str(index))
+def get_banek(addr):
+    req = requests.get('http://baneks.ru/' + addr)
     req.encoding = 'utf-8'
 
     parser = etree.HTMLParser()
@@ -25,9 +22,9 @@ def get_banek(index):
 
 def main():
     if len(argv) == 1:
-        num = random.randint(1,_max_index)
+        num = 'random'
     elif argv[1].isdecimal():
-        num = int(argv[1])
+        num = argv[1]
     else:
         print("        --USAGE--              ")
         print("banek     -- print random banek")
