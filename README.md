@@ -1,6 +1,6 @@
 #Baneks
 
-Print a banek from http://baneks.ru to your console
+Print a anecdote category 'B' from http://baneks.ru to your console
 
 Usage:
 
