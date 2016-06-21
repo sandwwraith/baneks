@@ -12,7 +12,7 @@ banek NUM   #print banek with a number NUM
 Installation:
 
 ```bash
-python setup.py
+sudo python setup.py install
 ```
 
 Requirements:
