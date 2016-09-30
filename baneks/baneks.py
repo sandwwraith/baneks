@@ -15,10 +15,11 @@ def get_banek(addr):
     parser = etree.HTMLParser()
     root = etree.fromstring(req.text, parser)
     li = root.xpath("//section[@class='anek-view']")
-    text = etree.tostring(li[0].find('article'))
-
     if len(li) == 0:
         return 'Banek not found'
+
+    text = etree.tostring(li[0].find('article'))
+
     return html2text(text.decode()).replace("\\-", "-")
 
 def main():
