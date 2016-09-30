@@ -10,7 +10,7 @@ def read(fname):
 
 setup(
     name = "baneks",
-    version = "1.0.0",
+    version = "1.1.0",
     author = "Leonid Startsev",
     author_email = "sandwwraith@gmail.com",
     description = ("Print banek to standard output"),
@@ -18,8 +18,8 @@ setup(
     url = "https://github.com/sandwwraith/baneks",
     packages=['baneks'],
     long_description=read('README.md'),
-    requires=['requests','lxml'],
-    install_requires=['requests','lxml'],
+    requires=['requests','lxml','html2text'],
+    install_requires=['requests','lxml','html2text'],
     entry_points={
         "console_scripts": [
             "banek=baneks.baneks:main"

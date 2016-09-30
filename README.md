@@ -20,6 +20,7 @@ sudo python setup.py install
 * `Python3`
 * `requests`
 * `lxml`
+* `html2text`
 
 >All credits about content belong to baneks.ru 
 

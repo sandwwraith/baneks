@@ -6,7 +6,7 @@ from sys import exit as sysex
 
 from lxml import etree
 import requests
-
+from html2text import html2text
 
 def get_banek(addr):
     req = requests.get('http://baneks.ru/' + addr)
@@ -14,11 +14,12 @@ def get_banek(addr):
 
     parser = etree.HTMLParser()
     root = etree.fromstring(req.text, parser)
-    li = root.xpath("//meta[@name='description']")
+    li = root.xpath("//section[@class='anek-view']")
+    text = etree.tostring(li[0].find('article'))
 
     if len(li) == 0:
         return 'Banek not found'
-    return li[0].attrib['content']
+    return html2text(text.decode()).replace("\\-", "-")
 
 def main():
     if len(argv) == 1:
