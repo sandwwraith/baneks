@@ -1,12 +1,12 @@
 # Baneks
 
-Print a anecdote category 'B' from http://baneks.ru to standard output
+Print an amazing /b/ category anecdote from https://baneks.ru to standard output
 
 ## Usage:
 
 ```bash
-banek       #print random banek
-banek NUM   #print banek with a number NUM
+banek       #print a random banek
+banek NUM   #print a banek with number NUM
 ```
 
 ## Installation:
@@ -21,6 +21,7 @@ sudo python setup.py install
 * `requests`
 * `lxml`
 * `html2text`
+* `leonard`
 
-> All credits about content belong to baneks.ru 
+> Legal disclaimer: all anecdotes belong to baneks.ru 
 
